@@ -1,1 +1,1 @@
-//= require store/spree_address_book
+// require store/spree_address_book
