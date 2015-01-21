@@ -78,8 +78,8 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/spree_sitemap.git
-  revision: 23411ca474f63d566c9a7bce0b4f70740c602385
-  branch: master
+  revision: a9d8d27045db6e793e607bd16c5e71b5af4af9b9
+  branch: 2-4-stable
   specs:
     spree_sitemap (2.0.0.beta)
       sitemap_generator (~> 4.3.1)

@@ -57,7 +57,7 @@ gem 'spree_static_content', github: 'spree-contrib/spree_static_content', branch
 gem 'spree_reviews', github: 'spree-contrib/spree_reviews', branch: '2-4-stable'
 # gem 'spree_multi_domain', github: 'spree-contrib/spree-multi-domain', branch: "master"
 # gem 'spree_store_credits', github: 'spree-contrib/spree_store_credit_payment_method', branch: "2-3-stable"
-gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: 'master'
+gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: '2-4-stable'
 # gem 'spree_one_page_checkout', github: 'moholtzberg/spree_one_page_checkout'
 # gem 'spree_account_recurring', github: 'gpongelli/spree-account-recurring', branch: '2-4-stable'
 # gem "spree_address_book", github: 'moholtzberg/spree_address_book', branch: '2-4-stable'
