@@ -70,4 +70,5 @@ gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping', bran
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '2-4-stable'
 # gem 'spree_vouchers', github: 'spree-contrib/spree_vouchers', branch: 'master'
 # gem 'spree_add_to_cart_ajax', github: 'nathandao/spree_add_to_cart_ajax', branch: '2-4-stable'
+gem 'spree_env_ribbon', github: 'moholtzberg/spree_env_ribbon', branch: 'master'
 gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: 'master'
