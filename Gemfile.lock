@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 87f0618c7985254584ab01f7625be3d1090266d2
+  revision: e37ea5a1ccb54115d7baec3c5899350b90855532
   branch: master
   specs:
     spree_copiersflorida_theme (2.4.2)
@@ -123,7 +123,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree.git
-  revision: 90406f8f3f1a7158d2dfa9343bace7b0febf110b
+  revision: f577a3b788d0518b7479d11adb20ca311b462726
   branch: 2-4-stable
   specs:
     spree (2.4.3.beta)
@@ -275,7 +275,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.2)
     ffaker (1.31.0)
-    font-awesome-rails (4.2.0.0)
+    font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
@@ -326,7 +326,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    paranoia (2.0.4)
+    paranoia (2.0.5)
       activerecord (~> 4.0)
     pdf-core (0.2.5)
     pg (0.18.1)
