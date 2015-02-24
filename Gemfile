@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', group: :development
+gem 'sqlite3', group: :development
 gem "pg", group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -35,6 +35,7 @@ gem 'aws-sdk'
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -70,5 +71,8 @@ gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping', bran
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '2-4-stable'
 # gem 'spree_vouchers', github: 'spree-contrib/spree_vouchers', branch: 'master'
 # gem 'spree_add_to_cart_ajax', github: 'nathandao/spree_add_to_cart_ajax', branch: '2-4-stable'
-gem 'spree_env_ribbon', github: 'moholtzberg/spree_env_ribbon', branch: 'master'
-gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: 'master'
+# gem 'spree_env_ribbon', github: 'moholtzberg/spree_env_ribbon', branch: 'master'
+# gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: 'master'
+gem 'sendgrid-ruby'
+gem 'spree_product_documents', github: 'taniarv/spree_product_documents', branch: 'master'
+gem 'spree_copiersflorida_theme', path: '../spree_copiersflorida_theme'
