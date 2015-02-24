@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
+  revision: 2aea1a493b6996ba7d3694c9bf445576474a8d9c
+  branch: master
+  specs:
+    spree_copiersflorida_theme (2.4.2)
+      spree_core (~> 2.4.2)
+
+GIT
   remote: git://github.com/moholtzberg/spree_msrp.git
   revision: 6ab6c57f089631bf2e295b337cf14dfdeb8c5874
   branch: 2-4-stable
@@ -169,12 +177,6 @@ GIT
       spree_core (= 2.4.3.beta)
     spree_sample (2.4.3.beta)
       spree_core (= 2.4.3.beta)
-
-PATH
-  remote: ../spree_copiersflorida_theme
-  specs:
-    spree_copiersflorida_theme (2.4.2)
-      spree_core (~> 2.4.2)
 
 GEM
   remote: https://rubygems.org/
