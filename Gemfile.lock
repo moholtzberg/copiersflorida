@@ -1,10 +1,10 @@
 GIT
-  remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 1232a146d9e4a5f4402b01835e10a6fa1827bece
-  branch: master
+  remote: git://github.com/bpuklich/spree-google-base.git
+  revision: 06c6a2a202f425a0d91ffe8e9828a12b6243499d
+  branch: 2-4-stable
   specs:
-    spree_copiersflorida_theme (2.4.2)
-      spree_core (~> 2.4.2)
+    spree_google_base (2.0.0)
+      spree (~> 2.0)
 
 GIT
   remote: git://github.com/moholtzberg/spree_msrp.git
@@ -12,6 +12,15 @@ GIT
   branch: 2-4-stable
   specs:
     spree_msrp (2.4.0)
+      spree_core (~> 2.4.0)
+
+GIT
+  remote: git://github.com/spree-contrib/better_spree_paypal_express.git
+  revision: d9a24eb509251c6385cd4d7fb6b43019c4589f01
+  branch: 2-4-stable
+  specs:
+    spree_paypal_express (2.0.3)
+      paypal-sdk-merchant (= 1.106.1)
       spree_core (~> 2.4.0)
 
 GIT
@@ -178,6 +187,12 @@ GIT
     spree_sample (2.4.3.beta)
       spree_core (= 2.4.3.beta)
 
+PATH
+  remote: ../spree_copiersflorida_theme
+  specs:
+    spree_copiersflorida_theme (2.4.2)
+      spree_core (~> 2.4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -330,6 +345,11 @@ GEM
       mime-types
     paranoia (2.1.0)
       activerecord (~> 4.0)
+    paypal-sdk-core (0.2.10)
+      multi_json (~> 1.0)
+      xml-simple
+    paypal-sdk-merchant (1.106.1)
+      paypal-sdk-core (~> 0.2.3)
     pdf-core (0.2.5)
     pg (0.18.1)
     polyamorous (1.1.0)
@@ -444,6 +464,7 @@ GEM
       rack (>= 1.0)
     whenever (0.9.4)
       chronic (>= 0.6.3)
+    xml-simple (1.1.4)
 
 PLATFORMS
   ruby
@@ -467,8 +488,10 @@ DEPENDENCIES
   spree_copiersflorida_theme!
   spree_email_to_friend!
   spree_gateway!
+  spree_google_base!
   spree_mail_settings!
   spree_msrp!
+  spree_paypal_express!
   spree_print_invoice!
   spree_product_documents!
   spree_related_products!

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201174209) do
+ActiveRecord::Schema.define(version: 20150226221323) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -449,6 +449,19 @@ ActiveRecord::Schema.define(version: 20150201174209) do
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id"
   add_index "spree_payments", ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
   add_index "spree_payments", ["source_id", "source_type"], name: "index_spree_payments_on_source_id_and_source_type"
+
+  create_table "spree_paypal_express_checkouts", force: true do |t|
+    t.string   "token"
+    t.string   "payer_id"
+    t.string   "transaction_id"
+    t.string   "state",                 default: "complete"
+    t.string   "refund_transaction_id"
+    t.datetime "refunded_at"
+    t.string   "refund_type"
+    t.datetime "created_at"
+  end
+
+  add_index "spree_paypal_express_checkouts", ["transaction_id"], name: "index_spree_paypal_express_checkouts_on_transaction_id"
 
   create_table "spree_plans", force: true do |t|
     t.string   "api_plan_id"
@@ -1106,6 +1119,14 @@ ActiveRecord::Schema.define(version: 20150201174209) do
   add_index "spree_tax_rates", ["show_rate_in_label"], name: "index_spree_tax_rates_on_show_rate_in_label"
   add_index "spree_tax_rates", ["tax_category_id"], name: "index_spree_tax_rates_on_tax_category_id"
   add_index "spree_tax_rates", ["zone_id"], name: "index_spree_tax_rates_on_zone_id"
+
+  create_table "spree_taxon_maps", force: true do |t|
+    t.integer  "taxon_id"
+    t.string   "product_type"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_taxonomies", force: true do |t|
     t.string   "name",                   null: false

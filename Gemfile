@@ -74,5 +74,7 @@ gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', bran
 # gem 'spree_env_ribbon', github: 'moholtzberg/spree_env_ribbon', branch: 'master'
 gem 'sendgrid-ruby'
 gem 'spree_product_documents', github: 'taniarv/spree_product_documents', branch: 'master'
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
+gem 'spree_google_base', github: 'bpuklich/spree-google-base', branch: '2-4-stable'
 # gem 'spree_copiersflorida_theme', path: '../spree_copiersflorida_theme'
 gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: 'master'

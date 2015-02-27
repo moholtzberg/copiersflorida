@@ -11,3 +11,4 @@
 //= require_tree .
 //= require spree/frontend/spree_reviews
 //= require spree/frontend/spree_copiersflorida_theme
+//= require spree/frontend/spree_paypal_express
