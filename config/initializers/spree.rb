@@ -24,8 +24,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ":rails_root/public/spree/products/:id/:style/:basename.:extension",
-    default_url:   "/spree/products/:id/:style/:basename.:extension",
+    path:          ":rails_root/public/spree/images/:id/:style/:basename.:extension",
+    default_url:   "/spree/images/:id/:style/:basename.:extension",
     default_style: "product"
   }
   
