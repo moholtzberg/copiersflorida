@@ -9,6 +9,4 @@
 //= require spree/backend
 
 //= require_tree .
-//= require spree/backend/spree_reviews
-//= require spree/backend/spree_copiersflorida_theme
-//= require spree/backend/spree_paypal_express
+//= require spree/backend/spree_messages

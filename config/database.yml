@@ -17,10 +17,12 @@ development:
   password: <%= ENV["dev_pw"] %>
 
 # development:
-#   <<: *default
-#   host: localhost
-#   username: user
-#   database: app-dev
+#   adapter: postgresql
+#   encoding: unicode
+#   host: ec2-54-204-37-92.compute-1.amazonaws.com
+#   username: blpeqcytfoutpa
+#   database: deuhjed5a1jfuc
+#   password: dMnUt_4Wb5t41wV0qYJ3LbhVZl
 
 test:
   <<: *default
