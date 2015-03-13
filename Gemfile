@@ -54,14 +54,14 @@ gem 'sendgrid-ruby'
 spree_version = '3-0-stable'
 master = 'master'
 
-gem 'spree',                  github: 'spree/spree', branch: '3-0-stable'
-gem 'spree_gateway',          github: 'spree/spree_gateway', branch: '3-0-stable'
-gem 'spree_auth_devise',      github: 'spree/spree_auth_devise', branch: '3-0-stable'
+gem 'spree',                  github: 'spree/spree', branch: spree_version
+gem 'spree_gateway',          github: 'spree/spree_gateway', branch: spree_version
+gem 'spree_auth_devise',      github: 'spree/spree_auth_devise', branch: spree_version
 
-gem 'spree_print_invoice',    github: 'spree-contrib/spree_print_invoice', branch: '3-0-stable'
+gem 'spree_print_invoice',    github: 'spree-contrib/spree_print_invoice', branch: spree_version
 
-gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap', branch: '3-0-stable'
-gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: '3-0-stable'
+gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap', branch: spree_version
+gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: spree_version
 # gem 'spree_mail_settings',  github: 'spree-contrib/spree_mail_settings', branch: spree_version
 
 gem 'spree_paypal_express',   github: 'spree-contrib/better_spree_paypal_express', branch: master
@@ -69,6 +69,7 @@ gem "spree_related_products", github: 'spree-contrib/spree_related_products', br
 gem 'spree_comments',         github: 'spree-contrib/spree_comments', branch: master
 # gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping', branch: master
 
+gem 'spree_advanced_admin_ui', github: 'moholtzberg/spree_advanced_admin_ui', branch: master
 gem 'spree_msrp', github: 'moholtzberg/spree_msrp', branch: '3-0-stable'
 gem 'spree_product_documents', github: 'moholtzberg/spree_product_documents', branch: master
 # gem 'spree_env_ribbon', github: 'moholtzberg/spree_env_ribbon', branch: 'master'
@@ -94,7 +95,7 @@ gem 'spree_google_base', github: 'jumph4x/spree-google-base', branch: '3-0-rc'
 # gem 'spree_social', github: 'spree-contrib/spree_social', branch: 'master'
 # gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: 'master'
 
-gem 'spree_messages', path: '../spree_messages'
-gem 'spree_static_content',   github: 'spree-contrib/spree_static_content', branch: '3-0-stable'
-gem 'spree_copiersflorida_theme', path: '../spree_copiersflorida_theme'
-# gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: 'master'
+gem 'spree_messages', github: 'moholtzberg/spree_messages', branch: master
+gem 'spree_static_content',   github: 'spree-contrib/spree_static_content', branch: spree_version
+# gem 'spree_copiersflorida_theme', path: '../spree_copiersflorida_theme'
+gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: master
