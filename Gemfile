@@ -61,7 +61,7 @@ gem 'spree_auth_devise',      github: 'spree/spree_auth_devise', branch: spree_v
 gem 'spree_print_invoice',    github: 'spree-contrib/spree_print_invoice', branch: spree_version
 
 gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap', branch: spree_version
-gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: spree_version
+# gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: spree_version
 # gem 'spree_mail_settings',  github: 'spree-contrib/spree_mail_settings', branch: spree_version
 
 gem 'spree_paypal_express',   github: 'spree-contrib/better_spree_paypal_express', branch: master
