@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: f589cb097b046d5c54c7ccefc1ac521e0e24439a
+  revision: 5435b7bc55ca1842a29a514828346ca5c45c7842
   branch: master
   specs:
     spree_copiersflorida_theme (2.4.2)
@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_product_documents.git
-  revision: bba8ad6353846eb0c826fac2a10b4c4ed54b474a
+  revision: 70e08e304a9ddc89f64747ddc95e4f46a8dcc4fa
   branch: master
   specs:
     spree_product_documents (3.0.0.rc)
@@ -103,7 +103,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: c06d984c28cb90fcc686c0814f2c1c1d48d104c0
+  revision: 394efdc67a0a53bfedcd180594d24aa2369bcc30
   branch: 3-0-stable
   specs:
     spree (3.0.0)
@@ -244,7 +244,7 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.3)
+    bootstrap-sass (3.3.4)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     builder (3.2.2)
