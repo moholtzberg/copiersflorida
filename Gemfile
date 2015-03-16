@@ -5,6 +5,7 @@ source 'https://rails-assets.org'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
+# gem 'sqlite3'
 gem "pg", group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -33,7 +34,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'byebug',  group: :development
 
  # Access an IRB console on exception pages or by using <%= console %> in views
- gem 'web-console', '~> 2.0',  group: :development
+gem 'web-console', '~> 2.0',  group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 5435b7bc55ca1842a29a514828346ca5c45c7842
+  revision: bb0b64ac209d981cce55d7eadd383ad90cc82057
   branch: master
   specs:
     spree_copiersflorida_theme (2.4.2)
@@ -103,7 +103,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 394efdc67a0a53bfedcd180594d24aa2369bcc30
+  revision: b353bbdba0c80a6c82586c40e9402601d7f96a18
   branch: 3-0-stable
   specs:
     spree (3.0.0)
