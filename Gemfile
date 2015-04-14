@@ -4,8 +4,8 @@ source 'https://rails-assets.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
-# gem 'sqlite3'
+# gem 'sqlite3', group: :development
+gem 'sqlite3'
 gem "pg", group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -59,16 +59,17 @@ gem 'spree',                  github: 'spree/spree', branch: spree_version
 gem 'spree_gateway',          github: 'spree/spree_gateway', branch: spree_version
 gem 'spree_auth_devise',      github: 'spree/spree_auth_devise', branch: spree_version
 
-gem 'spree_print_invoice',    github: 'spree-contrib/spree_print_invoice', branch: spree_version
-
-gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap', branch: spree_version
+gem 'spree_print_invoice',    github: 'spree-contrib/spree_print_invoice',    branch: spree_version
+gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap',          branch: spree_version
+gem 'spree_active_shipping',  github: 'spree-contrib/spree_active_shipping',  branch: spree_version
+gem 'spree_editor',           github: 'spree-contrib/spree_editor',           branch: spree_version
+gem 'spree_comments',         github: 'spree-contrib/spree_comments',         branch: spree_version
 # gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: spree_version
 # gem 'spree_mail_settings',  github: 'spree-contrib/spree_mail_settings', branch: spree_version
 
 gem 'spree_paypal_express',   github: 'spree-contrib/better_spree_paypal_express', branch: master
 gem "spree_related_products", github: 'spree-contrib/spree_related_products', branch: master
-gem 'spree_comments',         github: 'spree-contrib/spree_comments', branch: master
-# gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping', branch: master
+
 
 gem 'spree_advanced_admin_ui', github: 'moholtzberg/spree_advanced_admin_ui', branch: master
 gem 'spree_msrp', github: 'moholtzberg/spree_msrp', branch: '3-0-stable'
