@@ -23,6 +23,14 @@ GIT
       spree_core (>= 2.4.2)
 
 GIT
+  remote: git://github.com/moholtzberg/spree_error_pages.git
+  revision: d4d96746067cae20089d205c0275a5f935ae98df
+  branch: master
+  specs:
+    spree_error_pages (3.0.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/moholtzberg/spree_messages.git
   revision: 5c15d1e74fd69debf1bb7a8fedc86601dce51938
   branch: master
@@ -548,6 +556,7 @@ DEPENDENCIES
   spree_comments!
   spree_copiersflorida_theme!
   spree_editor!
+  spree_error_pages!
   spree_gateway!
   spree_google_base!
   spree_messages!
