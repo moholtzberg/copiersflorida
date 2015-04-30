@@ -97,9 +97,10 @@ gem 'spree_google_base', github: 'jumph4x/spree-google-base', branch: '3-0-rc'
 # gem 'spree_social', github: 'spree-contrib/spree_social', branch: 'master'
 # gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: 'master'
 
-gem 'spree_messages', github: 'moholtzberg/spree_messages', branch: master
+
 gem 'spree_static_content',   github: 'spree-contrib/spree_static_content', branch: spree_version
 gem 'spree_error_pages', github: 'moholtzberg/spree_error_pages', branch: master
+gem 'spree_messages', github: 'moholtzberg/spree_messages', branch: master
 # gem 'spree_copiersflorida_theme', path: '../spree_copiersflorida_theme'
 # gem 'spree_filter_by_taxon', path: '../spree_filter_by_taxon'
 gem 'spree_copiersflorida_theme', github: 'moholtzberg/spree_copiersflorida_theme', branch: master
