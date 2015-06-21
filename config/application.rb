@@ -26,9 +26,9 @@ module Copiersflorida
     config.paperclip_defaults = {
       :storage => :s3,
       s3_credentials: {
-        access_key_id: SECRET['AWS_ACCESS_KEY_ID'],
-        secret_access_key: SECRET['AWS_SECRET_ACCESS_KEY'],
-        bucket: SECRET['S3_BUCKET_NAME'],
+        access_key_id: SECRET["AWS"]["ACCESS_KEY_ID"],
+        secret_access_key: SECRET["AWS"]["SECRET_ACCESS_KEY"],
+        bucket: SECRET["AWS"]["S3"]["BUCKET_NAME"],
       },
     }
     config.active_record.raise_in_transactional_callbacks = true
