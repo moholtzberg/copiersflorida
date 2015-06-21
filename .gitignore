@@ -19,4 +19,5 @@ public/sitemap*
 public/sitemap*
 public/assets*
 public/spree*
+config/database.yml
 
