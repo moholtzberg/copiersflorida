@@ -21,41 +21,41 @@
 
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
 # set path to application
-# app_dir = File.expand_path("../..", __FILE__)
-# app_dir = "/home/spree/copiersflorida/current"
-# puts "---------------------------------------------#{app_dir}"
-# shared_dir = "/home/spree/copiersflorida/shared"
-# puts "---------------------------------------------#{shared_dir}"
-# working_directory app_dir
-# 
-# # Set unicorn options
-# worker_processes 2
-# preload_app true
-# timeout 30
-# 
-# # Set up socket location
-# listen "#{shared_dir}/sockets/unicorn.sock", :backlog => 64
-# 
-# # Logging
-# stderr_path "#{shared_dir}/log/unicorn.stderr.log"
-# stdout_path "#{shared_dir}/log/unicorn.stdout.log"
-# 
-# # Set master PID location
-# pid "#{shared_dir}/pids/unicorn.pid"
+app_dir = File.expand_path("../..", __FILE__)
+app_dir = "/home/spree/copiersflorida/current"
+puts "---------------------------------------------#{app_dir}"
+shared_dir = "/home/spree/copiersflorida/shared"
+puts "---------------------------------------------#{shared_dir}"
+working_directory app_dir
 
-root = "/home/spree/copiersflorida/current"
-working_directory root
-
-pid "#{root}/tmp/pids/unicorn.pid"
-
-stderr_path "#{root}/log/unicorn.log"
-stdout_path "#{root}/log/unicorn.log"
-
+# Set unicorn options
 worker_processes 2
-timeout 30
 preload_app true
+timeout 30
 
-listen '/tmp/unicorn.spui.sock', backlog: 64
+# Set up socket location
+listen "#{shared_dir}/sockets/unicorn.sock", :backlog => 64
+
+# Logging
+stderr_path "#{shared_dir}/log/unicorn.stderr.log"
+stdout_path "#{shared_dir}/log/unicorn.stdout.log"
+
+# Set master PID location
+pid "#{shared_dir}/pids/unicorn.pid"
+
+# root = "/home/spree/copiersflorida/current"
+# working_directory root
+# 
+# pid "#{root}/tmp/pids/unicorn.pid"
+# 
+# stderr_path "#{root}/log/unicorn.log"
+# stdout_path "#{root}/log/unicorn.log"
+# 
+# worker_processes 2
+# timeout 30
+# preload_app true
+
+# listen '/tmp/unicorn.spui.sock', backlog: 64
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
