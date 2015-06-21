@@ -2,16 +2,14 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-
+secret_file = "../../shared/app_secrets.yml"
+SECRET = File.exists?(secret_file) ? YAML.load_file(secret_file) : {}
 
 module Copiersflorida
   class Application < Rails::Application
-    secret_file = "../../shared/app_secrets.yml"
-    SECRET = File.exists?(secret_file) ? YAML.load_file(secret_file) : {}
+    
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -28,9 +26,9 @@ module Copiersflorida
     config.paperclip_defaults = {
       :storage => :s3,
       s3_credentials: {
-        access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-        bucket: ENV['S3_BUCKET_NAME'],
+        access_key_id: SECRET['AWS_ACCESS_KEY_ID'],
+        secret_access_key: SECRET['AWS_SECRET_ACCESS_KEY'],
+        bucket: SECRET['S3_BUCKET_NAME'],
       },
     }
     config.active_record.raise_in_transactional_callbacks = true
