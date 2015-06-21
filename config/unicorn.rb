@@ -24,7 +24,8 @@
 
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
 # set path to application
-app_dir = File.expand_path("../..", __FILE__)
+# app_dir = File.expand_path("../..", __FILE__)
+app_dir = "/home/spree/copiersflorida"
 puts "---------------------------------------------#{app_dir}"
 shared_dir = "#{app_dir}/shared"
 puts "---------------------------------------------#{shared_dir}"
