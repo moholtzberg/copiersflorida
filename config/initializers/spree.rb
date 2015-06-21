@@ -13,7 +13,7 @@ Spree.config do |config|
       "Cache-Control" => "max-age=31557600" 
     },
     s3_protocol:    "https",
-    bucket:         ENV['S3_BUCKET_NAME'],
+    bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
 
     styles: {
       mini:     "48x48>",
@@ -32,9 +32,9 @@ Spree.config do |config|
 
   puts "=============================================================="
   puts "=============================================================="
-  puts "==            >>>>>>>>>>>>>>>> #{ENV['AWS_ACCESS_KEY_ID']}"
-  puts "==            >>>>>>>>>>>>>>>> #{ENV['AWS_SECRET_ACCESS_KEY']}"
-  puts "==            >>>>>>>>>>>>>>>> #{ENV['S3_BUCKET_NAME']}"
+  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["ACCESS_KEY_ID"]}"
+  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["SECRET_ACCESS_KEY"]}"
+  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["S3"]["BUCKET_NAME"]}"
   puts "=============================================================="
   puts "=============================================================="
   
