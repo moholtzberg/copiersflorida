@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+secret_file = "../../shared/app_secrets.yml"
+SECRET = File.exists?(secret_file) ? YAML.load_file(secret_file) : {}
+
 module Copiersflorida
   class Application < Rails::Application
     
