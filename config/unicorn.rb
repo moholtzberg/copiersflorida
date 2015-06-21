@@ -1,7 +1,6 @@
 # worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 # timeout 15
 # preload_app true
-# 
 # before_fork do |server, worker|
 #   Signal.trap 'TERM' do
 #     puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
@@ -11,7 +10,6 @@
 #   defined?(ActiveRecord::Base) and
 #     ActiveRecord::Base.connection.disconnect!
 # end
-# 
 # after_fork do |server, worker|
 #   Signal.trap 'TERM' do
 #     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
@@ -21,16 +19,14 @@
 #     ActiveRecord::Base.establish_connection
 # end
 
-
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
 # set path to application
 # app_dir = File.expand_path("../..", __FILE__)
-app_dir = "/home/spree/copiersflorida"
+app_dir = "/home/spree/copiersflorida/current"
 puts "---------------------------------------------#{app_dir}"
-shared_dir = "#{app_dir}/shared"
+shared_dir = "/home/spree/copiersflorida/shared"
 puts "---------------------------------------------#{shared_dir}"
 working_directory app_dir
-
 
 # Set unicorn options
 worker_processes 2
