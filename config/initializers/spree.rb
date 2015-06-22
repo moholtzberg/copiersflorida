@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          "/spree/:class/:id/:style/:basename.:extension",
-    default_url:   "/spree/:class/:id/:style/:basename.:extension",
+    path:          "copiersflorida/spree/:class/:id/:style/:basename.:extension",
+    default_url:   "copiersflorida/spree/:class/:id/:style/:basename.:extension",
     default_style: "product"
   }
   
