@@ -7,14 +7,6 @@ GIT
       spree (~> 3.0.0.rc1)
 
 GIT
-  remote: git://github.com/moholtzberg/spree_advanced_admin_ui.git
-  revision: 97f7ede4280de65ef7a029cc20651e5e06dd3258
-  branch: master
-  specs:
-    spree_advanced_admin_ui (3.0.0)
-      spree_core (~> 3.0.0)
-
-GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
   revision: f79e37c911677a0785d464d68d9cd4455fc563a7
   branch: master
@@ -24,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_error_pages.git
-  revision: d4d96746067cae20089d205c0275a5f935ae98df
+  revision: 46f44462452a2101a88f7ef3566cf5309ba04f0c
   branch: master
   specs:
     spree_error_pages (3.0.0)
@@ -66,7 +58,7 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/spree_active_shipping.git
-  revision: f62367ec7f48bc4179a920d25effc2aff338a70e
+  revision: 41f628cb6ceb9db3d4127f4efd472642a839ac49
   branch: 3-0-stable
   specs:
     spree_active_shipping (3.0.0.beta)
@@ -86,30 +78,30 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/spree_editor.git
-  revision: 9925292874d717f1aa2d5870a22204b6ca0129b4
+  revision: 58138d76de0d3a5b350f0a2ffb3b581ca099dd6b
   branch: 3-0-stable
   specs:
     spree_editor (2.2.1)
-      ckeditor (~> 4.1.1)
+      ckeditor (~> 4.1.2)
       spree_backend (~> 3.0.0)
       tinymce-rails (~> 4.0.16)
 
 GIT
   remote: git://github.com/spree-contrib/spree_print_invoice.git
-  revision: d0df3a09739702893df66fbb21389f3e3360eea8
+  revision: a4b8acfcaedf0448e69a448850dfd4d00425e40d
   branch: 3-0-stable
   specs:
     spree_print_invoice (3.0.0.beta)
       prawn (~> 1.0.0)
-      spree_core (~> 3.0.0.beta)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree-contrib/spree_related_products.git
-  revision: f468ea92d0669189ea09f2dd44f63b9f4b7cc24f
-  branch: master
+  revision: a265c6ee74189e0bab23aba38df340230ae4b080
+  branch: 3-0-stable
   specs:
     spree_related_products (3.2.0)
-      spree_backend (~> 3.0.0.beta)
+      spree_backend (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree-contrib/spree_sitemap.git
@@ -130,31 +122,31 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 3af37a8dbe3671a63a1d5890523e526407f66239
+  revision: 45dab9f701dc01880ce5195371dfc04ad5f8562a
   branch: 3-0-stable
   specs:
-    spree (3.0.0)
-      spree_api (= 3.0.0)
-      spree_backend (= 3.0.0)
-      spree_cmd (= 3.0.0)
-      spree_core (= 3.0.0)
-      spree_frontend (= 3.0.0)
-      spree_sample (= 3.0.0)
-    spree_api (3.0.0)
+    spree (3.0.2.beta)
+      spree_api (= 3.0.2.beta)
+      spree_backend (= 3.0.2.beta)
+      spree_cmd (= 3.0.2.beta)
+      spree_core (= 3.0.2.beta)
+      spree_frontend (= 3.0.2.beta)
+      spree_sample (= 3.0.2.beta)
+    spree_api (3.0.2.beta)
       rabl (~> 0.9.4.pre1)
-      spree_core (= 3.0.0)
+      spree_core (= 3.0.2.beta)
       versioncake (~> 2.3.1)
-    spree_backend (3.0.0)
+    spree_backend (3.0.2.beta)
       bootstrap-sass (~> 3.3.1)
       jquery-rails (~> 4.0.3)
       jquery-ui-rails (~> 5.0.0)
       select2-rails (= 3.5.9.1)
-      spree_api (= 3.0.0)
-      spree_core (= 3.0.0)
+      spree_api (= 3.0.2.beta)
+      spree_core (= 3.0.2.beta)
       sprockets-rails (~> 2.2)
-    spree_cmd (3.0.0)
+    spree_cmd (3.0.2.beta)
       thor (~> 0.14)
-    spree_core (3.0.0)
+    spree_core (3.0.2.beta)
       activemerchant (~> 1.47.0)
       acts_as_list (~> 0.6)
       awesome_nested_set (~> 3.0.1)
@@ -179,19 +171,19 @@ GIT
       stringex
       truncate_html (= 0.9.2)
       twitter_cldr (~> 3.0)
-    spree_frontend (3.0.0)
+    spree_frontend (3.0.2.beta)
       bootstrap-sass (~> 3.3.1)
       canonical-rails (~> 0.0.4)
       jquery-rails (~> 4.0.3)
-      spree_api (= 3.0.0)
-      spree_core (= 3.0.0)
+      spree_api (= 3.0.2.beta)
+      spree_core (= 3.0.2.beta)
       sprockets-rails (~> 2.2)
-    spree_sample (3.0.0)
-      spree_core (= 3.0.0)
+    spree_sample (3.0.2.beta)
+      spree_core (= 3.0.2.beta)
 
 GIT
   remote: git://github.com/spree/spree_auth_devise.git
-  revision: 347428395b8c06c79c3bfe516404314a1c365839
+  revision: d2ee454e21746094d6e0bc79b9d4421b5849c20e
   branch: 3-0-stable
   specs:
     spree_auth_devise (3.0.0)
@@ -207,6 +199,27 @@ GIT
   branch: 3-0-stable
   specs:
     spree_gateway (3.0.0.beta)
+      spree_core (~> 3.0.0)
+
+PATH
+  remote: ../spree-multi-domain
+  specs:
+    spree_multi_domain (3.0.0)
+      spree_api (~> 3.0.0)
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
+      spree_frontend (~> 3.0.0)
+
+PATH
+  remote: ../spree_advanced_admin_ui
+  specs:
+    spree_advanced_admin_ui (3.0.0)
+      spree_core (~> 3.0.0)
+
+PATH
+  remote: ../spree_terms
+  specs:
+    spree_terms (3.0.0)
       spree_core (~> 3.0.0)
 
 GEM
@@ -232,12 +245,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    active_shipping (1.0.0.pre4)
+    active_shipping (1.0.1)
       active_utils (~> 3.0.0)
       activesupport (>= 3.2, < 5.0.0)
-      builder (>= 2.1.2, < 4.0.0)
       nokogiri (>= 1.6)
-      quantified (~> 1.0)
+      quantified (~> 1.0.1)
     active_utils (3.0.0)
       activesupport (>= 3.2)
       i18n
@@ -263,11 +275,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     acts_as_commentable (4.0.1)
-    acts_as_list (0.6.0)
+    acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.3.8)
     arel (6.0.0)
-    autoprefixer-rails (5.1.11)
+    autoprefixer-rails (5.2.0)
       execjs
       json
     awesome_nested_set (3.0.2)
@@ -284,16 +296,29 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     builder (3.2.2)
-    byebug (4.0.5)
+    byebug (5.0.0)
       columnize (= 0.9.0)
     camertron-eprun (1.1.0)
     cancancan (1.10.1)
     canonical-rails (0.0.9)
       rails (>= 3.1, < 5.0)
+    capistrano (3.4.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.1.3)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     carmen (1.0.2)
       activesupport (>= 3.0.0)
     chronic (0.10.2)
-    ckeditor (4.1.1)
+    ckeditor (4.1.2)
       cocaine
       orm_adapter (~> 0.5.0)
     cldr-plurals-runtime-rb (1.0.0)
@@ -343,37 +368,41 @@ GEM
     htmlentities (4.3.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    httparty (0.13.3)
+    httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    jbuilder (2.2.13)
+    jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (5.0.3)
+    jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
-    json (1.8.2)
+    json (1.8.3)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.3)
-    loofah (2.0.1)
+    libv8 (3.16.14.7)
+    loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.5)
+    mime-types (2.6.1)
     mini_portile (0.6.2)
-    minitest (5.6.1)
+    minitest (5.7.0)
     monetize (1.3.0)
       money (~> 6.5.0)
     money (6.5.1)
       i18n (>= 0.6.4, <= 0.7.0)
     multi_json (1.11.0)
     multi_xml (0.5.5)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.2)
     netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -391,7 +420,7 @@ GEM
     paypal-sdk-merchant (1.106.1)
       paypal-sdk-core (~> 0.2.3)
     pdf-core (0.2.5)
-    pg (0.18.1)
+    pg (0.18.2)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -401,13 +430,13 @@ GEM
     premailer (1.8.4)
       css_parser (>= 1.3.6)
       htmlentities (>= 4.0.0)
-    premailer-rails (1.8.0)
+    premailer-rails (1.8.2)
       actionmailer (>= 3, < 5)
       premailer (~> 1.7, >= 1.7.9)
-    quantified (1.0.0)
+    quantified (1.0.1)
     rabl (0.9.4.pre1)
       activesupport (>= 2.3.14)
-    rack (1.6.0)
+    rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -448,7 +477,7 @@ GEM
       i18n
       polyamorous (~> 1.1)
     rdoc (4.2.0)
-      json (~> 1.4)
+    ref (1.0.5)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rest-client (1.8.0)
@@ -472,17 +501,21 @@ GEM
     sitemap_generator (4.3.1)
       builder
     smtpapi (0.1.0)
-    spring (1.3.5)
+    spring (1.3.6)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.4)
+    sprockets-rails (2.3.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
+    sshkit (1.7.1)
+      colorize (>= 0.7.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     state_machines (0.2.2)
     state_machines-activemodel (0.1.2)
       activemodel (~> 4.1)
@@ -491,6 +524,9 @@ GEM
       activerecord (~> 4.1)
       state_machines-activemodel (~> 0.1.0)
     stringex (2.5.2)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -539,6 +575,9 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk (< 2.0)
   byebug
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
@@ -561,14 +600,17 @@ DEPENDENCIES
   spree_google_base!
   spree_messages!
   spree_msrp!
+  spree_multi_domain!
   spree_paypal_express!
   spree_print_invoice!
   spree_product_documents!
   spree_related_products!
   spree_sitemap!
   spree_static_content!
+  spree_terms!
   spring
   sqlite3
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)
   unicorn

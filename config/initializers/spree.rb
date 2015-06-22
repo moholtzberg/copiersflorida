@@ -32,9 +32,9 @@ Spree.config do |config|
 
   puts "=============================================================="
   puts "=============================================================="
-  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["ACCESS_KEY_ID"]}"
-  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["SECRET_ACCESS_KEY"]}"
-  puts "==            >>>>>>>>>>>>>>>> #{SECRET["AWS"]["S3"]["BUCKET_NAME"]}"
+  puts "==  AWS ACCESS KEY ID       >>>>>>>>>>>> #{SECRET["AWS"]["ACCESS_KEY_ID"]}"
+  puts "==  AWS SECRET ACCESS KEY   >>>>>>>>>>>> #{SECRET["AWS"]["SECRET_ACCESS_KEY"]}"
+  puts "==  AWS S3 BUCKET NAME      >>>>>>>>>>>> #{SECRET["AWS"]["S3"]["BUCKET_NAME"]}"
   puts "=============================================================="
   puts "=============================================================="
   

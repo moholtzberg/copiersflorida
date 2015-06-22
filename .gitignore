@@ -20,4 +20,8 @@ public/sitemap*
 public/assets*
 public/spree*
 config/database.yml
+config/deploy.rb
+config/deploy/*
+config/deploy
+Capfile
 
