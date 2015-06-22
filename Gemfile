@@ -94,7 +94,7 @@ gem 'spree_google_base', github: 'jumph4x/spree-google-base', branch: '3-0-rc'
 # gem 'spree_account_recurring', github: 'gpongelli/spree-account-recurring', branch: '2-4-stable'
 # 
 # gem 'spree_reffiliate', github: 'DynamoMTL/spree_reffiliate', branch: '2-4-stable'
-gem 'spree_multi_domain', path: '../spree-multi-domain'
+# gem 'spree_multi_domain', path: '../spree-multi-domain'
 # gem 'spree_store_credits', github: 'spree-contrib/spree_store_credit_payment_method', branch: "2-3-stable"
 # gem 'spree_price_books', github: 'spree-contrib/spree_price_books', branch: '2-4-stable'
 # gem 'spree_social', github: 'spree-contrib/spree_social', branch: 'master'
@@ -103,8 +103,8 @@ gem 'spree_multi_domain', path: '../spree-multi-domain'
 # gem 'spree_ajax_add_to_cart', github: 'moholtzberg/spree_ajax_add_to_cart', branch: spree_version
 
 # gem 'spree_credit_lines', path: '../spree_credit_lines'
-gem 'spree_terms', path: '../spree_terms'
-gem 'spree_advanced_admin_ui', path: '../spree_advanced_admin_ui'
+# gem 'spree_terms', path: '../spree_terms'
+# gem 'spree_advanced_admin_ui', path: '../spree_advanced_admin_ui'
 gem 'spree_static_content',   github: 'spree-contrib/spree_static_content', branch: spree_version
 gem 'spree_error_pages', github: 'moholtzberg/spree_error_pages', branch: master
 gem 'spree_messages', github: 'moholtzberg/spree_messages', branch: master
