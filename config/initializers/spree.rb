@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          "copiersflorida/spree/:class/:id/:style/:basename.:extension",
-    default_url:   "copiersflorida/spree/:class/:id/:style/:basename.:extension",
+    path:          'app/public/spree/products/:id/:style/:basename.:extension',
+    default_url:   'app/public/spree/products/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -50,3 +50,5 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+Spree::Image.attachment_definitions[:attachment][:url] = 'app/public/spree/products/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path] = 'app/public/spree/products/:id/:style/:basename.:extension'
