@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem "pg", group: :production
@@ -41,12 +41,9 @@ gem 'unicorn'
 gem 'rails_12factor', group: :production
 
 group :development do 
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '~> 1.1.3'
   gem 'capistrano-bundler'
-  # gem 'capistrano-ssh-doctor', '~> 1.0', group: :development
   gem 'capistrano-rvm'
-  # gem 'capistrano-assets'
-  # gem 'rvm1-capistrano3', require: false
 end
 
 # Use debugger
