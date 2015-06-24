@@ -13,7 +13,8 @@ Spree.config do |config|
       "Cache-Control" => "max-age=31557600" 
     },
     s3_protocol:    "https",
-    bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
+    # bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
+    bucket: "lorem",
 
     styles: {
       mini:     "48x48>",
@@ -21,8 +22,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ':url',
-    default_url:   ':url',
+    path:          ':class/:id/:style/:basename.:extension',
+    # default_url:   ':url',
     default_style: "product"
   }
   
@@ -50,8 +51,8 @@ Spree.config do |config|
 end
 # puts "#{Spree::Image.attachment_definitions.inspect"
 Spree.user_class = "Spree::User"
-Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
+# Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
+# Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
 
 # Paperclip::Attachment.default_options[:url] = "/spree/:class/:id/:style/:basename.:extension"
 # Paperclip::Attachment.default_options[:path] = "/spree/:class/:id/:style/:basename.:extension"
