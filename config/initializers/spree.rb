@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          'app/public/spree/products/:id/:style/:basename.:extension',
-    default_url:   'app/public/spree/products/:id/:style/:basename.:extension',
+    path:          '/spree/:class/:id/:style/:basename.:extension',
+    default_url:   '/spree/:class/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -50,5 +50,5 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
-Spree::Image.attachment_definitions[:attachment][:url] = 'app/public/spree/products/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = 'app/public/spree/products/:id/:style/:basename.:extension'
+# Spree::Image.attachment_definitions[:attachment][:url] = '/spree/3/:class/:id/:style/:basename.:extension'
+# Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
