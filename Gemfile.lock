@@ -585,6 +585,7 @@ DEPENDENCIES
   spree_sitemap!
   spree_static_content!
   spring
+  sprockets (~> 2.8)
   sqlite3
   therubyracer
   turbolinks
