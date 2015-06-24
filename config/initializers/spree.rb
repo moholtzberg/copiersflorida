@@ -13,8 +13,7 @@ Spree.config do |config|
       "Cache-Control" => "max-age=31557600" 
     },
     s3_protocol:    "https",
-    # bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
-    bucket: "lorem",
+    bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
 
     styles: {
       mini:     "48x48>",
@@ -22,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ':class/:id/:style/:basename.:extension',
-    # default_url:   ':url',
+    path:          ':app/public/spree/products/:id/:style/:basename.:extension',
+    default_url:   ':app/public/spree/products/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -49,10 +48,7 @@ Spree.config do |config|
   # config.mails_from = "no-reply@copiersflorida.com"
   
 end
-# puts "#{Spree::Image.attachment_definitions.inspect"
-Spree.user_class = "Spree::User"
-# Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
-# Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
 
-# Paperclip::Attachment.default_options[:url] = "/spree/:class/:id/:style/:basename.:extension"
-# Paperclip::Attachment.default_options[:path] = "/spree/:class/:id/:style/:basename.:extension"
+Spree.user_class = "Spree::User"
+Spree::Image.attachment_definitions[:attachment][:url] = 'app/public/spree/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path] = 'app/public/spree/:class/:id/:style/:basename.:extension'
