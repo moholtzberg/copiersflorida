@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          '/spree/:class/:id/:style/:basename.:extension',
-    default_url:   '/spree/:class/:id/:style/:basename.:extension',
+    path:          ':url',
+    default_url:   ':url',
     default_style: "product"
   }
   
@@ -48,7 +48,10 @@ Spree.config do |config|
   # config.mails_from = "no-reply@copiersflorida.com"
   
 end
-
+# puts "#{Spree::Image.attachment_definitions.inspect"
 Spree.user_class = "Spree::User"
 Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
 Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
+
+# Paperclip::Attachment.default_options[:url] = "/spree/:class/:id/:style/:basename.:extension"
+# Paperclip::Attachment.default_options[:path] = "/spree/:class/:id/:style/:basename.:extension"
