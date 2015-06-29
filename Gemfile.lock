@@ -49,12 +49,12 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
-  revision: 69fd18c48b987f347488690ce220040cd0e644fc
-  branch: master
+  revision: 0723546e432c7f6546614ffc2101ff2ef88f397e
+  branch: 3-0-stable
   specs:
-    spree_paypal_express (2.0.3)
+    spree_paypal_express (3.0.0)
       paypal-sdk-merchant (= 1.106.1)
-      spree_core (~> 3.0.0.rc)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree-contrib/spree_active_shipping.git
