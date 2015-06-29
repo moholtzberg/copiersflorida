@@ -32,6 +32,7 @@ module Copiersflorida
         secret_access_key: SECRET["AWS"]["SECRET_ACCESS_KEY"],
         bucket: SECRET["AWS"]["S3"]["BUCKET_NAME"],
       },
+      :path => '/spree/:class/:id/:style/:basename.:extension'
     }
     config.active_record.raise_in_transactional_callbacks = true
     # Settings in config/environments/* take precedence over those specified here.
