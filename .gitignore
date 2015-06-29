@@ -23,5 +23,6 @@ config/database.yml
 config/deploy.rb
 config/deploy/*
 config/deploy
+config/newrelic.yml
 Capfile
 

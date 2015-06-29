@@ -22,15 +22,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
-
-gem 'byebug',  group: :development
-
- # Access an IRB console on exception pages or by using <%= console %> in views
-gem 'web-console', '~> 2.0',  group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,8 +38,17 @@ group :development do
   gem 'capistrano-rvm'
 end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+
+group :development do
+  gem 'better_errors'
+  gem "binding_of_caller"
+  gem 'debugger'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
+
+gem 'newrelic_rpm'
 
 gem 'whenever', :require => false
 gem 'sendgrid-ruby'
@@ -63,11 +65,12 @@ gem 'spree_sitemap',          github: 'spree-contrib/spree_sitemap',          br
 gem 'spree_active_shipping',  github: 'spree-contrib/spree_active_shipping',  branch: spree_version
 gem 'spree_editor',           github: 'spree-contrib/spree_editor',           branch: spree_version
 gem 'spree_comments',         github: 'spree-contrib/spree_comments',         branch: spree_version
+gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: spree_version
+# gem 'spree_multi_domain',     github: 'spree-contrib/spree-multi-domain',      branch: spree_version
 # gem 'spree_email_to_friend',  github: 'spree-contrib/spree_email_to_friend', branch: spree_version
 # gem 'spree_mail_settings',  github: 'spree-contrib/spree_mail_settings', branch: spree_version
 
 gem 'spree_paypal_express',   github: 'spree-contrib/better_spree_paypal_express', branch: master
-gem "spree_related_products", github: 'spree-contrib/spree_related_products', branch: spree_version
 
 
 # gem 'spree_advanced_admin_ui', github: 'moholtzberg/spree_advanced_admin_ui', branch: master
@@ -90,7 +93,7 @@ gem 'spree_google_base', github: 'jumph4x/spree-google-base', branch: '3-0-rc'
 # gem 'spree_account_recurring', github: 'gpongelli/spree-account-recurring', branch: '2-4-stable'
 # 
 # gem 'spree_reffiliate', github: 'DynamoMTL/spree_reffiliate', branch: '2-4-stable'
-# gem 'spree_multi_domain', path: '../spree-multi-domain'
+
 # gem 'spree_store_credits', github: 'spree-contrib/spree_store_credit_payment_method', branch: "2-3-stable"
 # gem 'spree_price_books', github: 'spree-contrib/spree_price_books', branch: '2-4-stable'
 # gem 'spree_social', github: 'spree-contrib/spree_social', branch: 'master'
