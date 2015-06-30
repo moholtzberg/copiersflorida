@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: e0d51538dd86bee11a99900f4b97c59fd3538b48
+  revision: e2022ce0de63d3cf2c2be08d2c8e03228a70ec3a
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
@@ -122,7 +122,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 96438b4091b51d3944305e2ba4ad7ddb16389616
+  revision: 8b3142ff2bd56132e979525a282df75bf7b60fbb
   branch: 3-0-stable
   specs:
     spree (3.0.2.beta)
@@ -496,7 +496,7 @@ GEM
       builder
     smtpapi (0.1.0)
     spring (1.3.6)
-    sprockets (2.12.3)
+    sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -530,7 +530,7 @@ GEM
     ttfunk (1.1.1)
     turbolinks (2.5.3)
       coffee-rails
-    twitter_cldr (3.1.2)
+    twitter_cldr (3.2.1)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0.0)
       json
