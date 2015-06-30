@@ -25,15 +25,15 @@ module Copiersflorida
     end
     config.assets.initialize_on_precompile = false
     
-    config.paperclip_defaults = {
-      :storage => :s3,
-      s3_credentials: {
-        access_key_id: SECRET["AWS"]["ACCESS_KEY_ID"],
-        secret_access_key: SECRET["AWS"]["SECRET_ACCESS_KEY"],
-        bucket: SECRET["AWS"]["S3"]["BUCKET_NAME"],
-      },
-      :path => '/spree/:class/:id/:style/:basename.:extension'
-    }
+    # config.paperclip_defaults = {
+    #   :storage => :s3,
+    #   s3_credentials: {
+    #     access_key_id: SECRET["AWS"]["ACCESS_KEY_ID"],
+    #     secret_access_key: SECRET["AWS"]["SECRET_ACCESS_KEY"],
+    #     bucket: SECRET["AWS"]["S3"]["BUCKET_NAME"],
+    #   },
+    #   :path => '/spree/:class/:id/:style/:basename.:extension'
+    # }
     config.active_record.raise_in_transactional_callbacks = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
