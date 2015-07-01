@@ -25,4 +25,5 @@ config/deploy/*
 config/deploy
 config/newrelic.yml
 Capfile
+_lucky_orange*
 
