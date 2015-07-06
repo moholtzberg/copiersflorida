@@ -24,7 +24,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_messages.git
-  revision: 153ad8ab3a25914239c937f40015dea90d28b1ce
+  revision: 9f35a1f3e1326923a46bce2f38b35bf571240923
   branch: master
   specs:
     spree_messages (3.0.0)
