@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 5bb5bd3448d483548bdb6ee4e4b23105bb398f37
+  revision: f206cc44f5aa1d37d8c7d2733053916be46f4a31
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
