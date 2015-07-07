@@ -43,6 +43,8 @@ gem 'newrelic_rpm'
 gem 'whenever', :require => false
 gem 'sendgrid-ruby'
 gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
+gem 'business_time'
+
 
 spree_version = '3-0-stable'
 master = 'master'
@@ -93,6 +95,7 @@ gem 'spree_msrp',                   github: 'moholtzberg/spree_msrp',           
 gem 'spree_product_documents',      github: 'moholtzberg/spree_product_documents',          branch: master
 gem 'spree_error_pages',            github: 'moholtzberg/spree_error_pages',                branch: master
 gem 'spree_messages',               github: 'moholtzberg/spree_messages',                   branch: master
+# gem 'spree_messages',               path: '../spree_messages'
 # gem 'spree_copiersflorida_theme',    path: '../spree_copiersflorida_theme'
 # gem 'spree_filter_by_taxon',         path: '../spree_filter_by_taxon'
 gem 'spree_copiersflorida_theme',   github: 'moholtzberg/spree_copiersflorida_theme',       branch: master
