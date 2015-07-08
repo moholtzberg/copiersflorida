@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 9dc912d850c9ad9e42ce6fc6c1cbf8e91ca23702
+  revision: ecd5b261df1868cbb3c01b1daeacc2b349195041
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
@@ -49,7 +49,7 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
-  revision: 928e73ac14af839d60df7f58abb29a81d498ef4b
+  revision: 0e8ffe79f63a205f80af66ed14c76d5e5834e182
   branch: 3-0-stable
   specs:
     spree_paypal_express (3.0.0)
@@ -75,6 +75,17 @@ GIT
       spree_api (~> 3.0.0)
       spree_backend (~> 3.0.0)
       spree_core (~> 3.0.0)
+
+GIT
+  remote: git://github.com/spree-contrib/spree_digital.git
+  revision: 4472570044da25ab0577896a955433ccdbc3202a
+  branch: 3-0-stable
+  specs:
+    spree_digital (1.1.1)
+      spree_api
+      spree_backend (~> 3.0.0)
+      spree_core (~> 3.0.0)
+      spree_frontend
 
 GIT
   remote: git://github.com/spree-contrib/spree_print_invoice.git
@@ -104,15 +115,15 @@ GIT
 
 GIT
   remote: git://github.com/spree-contrib/spree_static_content.git
-  revision: 035f85a4a4a08ee03331e7bb7100c27d99940186
+  revision: d39bb33ffc67041e87800d66d0fd43cfea67373c
   branch: 3-0-stable
   specs:
     spree_static_content (2.3.0)
-      spree_core (~> 3.0.0.rc2)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 438dd5e58c0dce0d503c5039acbb37a02c1ff1b6
+  revision: 0285c1325a8de3bd1bd5d7084d5f0165f6ff8e62
   branch: 3-0-stable
   specs:
     spree (3.0.2.beta)
@@ -352,7 +363,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
-    jbuilder (2.3.0)
+    jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (4.0.4)
@@ -581,6 +592,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_comments!
   spree_copiersflorida_theme!
+  spree_digital!
   spree_error_pages!
   spree_gateway!
   spree_google_base!
