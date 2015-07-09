@@ -3,6 +3,7 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+  config.action_mailer.asset_host = 'https://www.copiersflorida.com'
   # config.asset_host = "copiersflorida.herokuapp.com"
   # config.asset_host = "copiersflorida.com"
 
