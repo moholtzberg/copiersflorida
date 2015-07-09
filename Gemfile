@@ -30,7 +30,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.3'
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
-  gem 'capistrano3-unicorn'
+  # gem 'capistrano3-unicorn'
   gem 'better_errors'
   gem "binding_of_caller"
   gem 'debugger'
