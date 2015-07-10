@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: d15b0fbaab2f48a13caed431d3f98e690e85a893
+  revision: 3a1f96fae088452f9e2524004c78058940c517c4
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
@@ -123,7 +123,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: 0285c1325a8de3bd1bd5d7084d5f0165f6ff8e62
+  revision: 406ab7d8964fa51a396b432d51fcfca201ba3879
   branch: 3-0-stable
   specs:
     spree (3.0.2.beta)
@@ -276,9 +276,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.5)
+    bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.2.19)
+      sass (>= 3.3.0)
     builder (3.2.2)
     business_time (0.7.4)
       activesupport (>= 3.1.0)
@@ -355,7 +355,6 @@ GEM
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     highline (1.6.21)
-    hike (1.2.3)
     htmlentities (4.3.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -479,12 +478,13 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.2.19)
-    sass-rails (4.0.5)
+    sass (3.4.15)
+    sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.2)
-      sprockets (~> 2.8, < 3.0)
-      sprockets-rails (~> 2.0)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (~> 1.1)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -497,11 +497,8 @@ GEM
       builder
     smtpapi (0.1.0)
     spring (1.3.6)
-    sprockets (2.12.4)
-      hike (~> 1.2)
-      multi_json (~> 1.0)
+    sprockets (3.2.0)
       rack (~> 1.0)
-      tilt (~> 1.1, != 1.3.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -584,7 +581,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.2)
   rails_12factor
-  sass-rails (~> 4.0.3)
+  sass-rails
   sdoc (~> 0.4.0)
   sendgrid-ruby
   spree!

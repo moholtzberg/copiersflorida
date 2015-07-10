@@ -9,3 +9,4 @@
 //= require spree/frontend
 //= requite tree .
 //= require spree/frontend/spree_digital
+//= require spree/frontend/spree_copiersflorida_theme
