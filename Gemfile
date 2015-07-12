@@ -64,7 +64,7 @@ gem 'spree_static_content',         github: 'spree-contrib/spree_static_content'
 gem 'spree_digital',                github: 'spree-contrib/spree_digital',                  branch: spree_version
 
 gem 'spree_google_base',            github: 'jumph4x/spree-google-base',                    branch: '3-0-rc'
-gem 'spree_shipstation',            github: 'mleglise/spree_shipstation',                   branch: spree_version
+gem 'spree_shipstation',            github: 'moholtzberg/spree_shipstation',                branch: spree_version
 
 # gem 'spree_multi_domain',            github: 'spree-contrib/spree-multi-domain',              branch: spree_version
 # gem 'spree_email_to_friend',         github: 'spree-contrib/spree_email_to_friend',           branch: spree_version
