@@ -47,8 +47,24 @@ Spree.config do |config|
   # config.override_actionmailer_config = true
   # config.mails_from = "no-reply@copiersflorida.com"
   
+  if Rails.env.production?
+      config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
+      config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
+    else
+      config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
+      config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
+    end
+
+    config.shipstation_weight_units = "Ounces" # Grams, Ounces or Pounds
+
+    # choose which number to send shipstation, use :shipment or :order, default is :shipment
+    config.shipstation_number = :shipment
+
+    # if you prefer to send notifications via shipstation
+    config.send_shipped_email = false
+  
 end
 
 Spree.user_class = "Spree::User"
-Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:url] = '/images/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path] = '/images/:id/:style/:basename.:extension'
