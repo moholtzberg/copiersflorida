@@ -7,6 +7,14 @@ GIT
       spree (~> 3.0.0.rc1)
 
 GIT
+  remote: git://github.com/mleglise/spree_shipstation.git
+  revision: ea3f86c99c8a907a76280377c9f518f21ccf7071
+  branch: 3-0-stable
+  specs:
+    spree_shipstation (3.0.0)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
   revision: 944bc124ad494f6a5b08267b30504f54f574391d
   branch: master
@@ -599,6 +607,7 @@ DEPENDENCIES
   spree_print_invoice!
   spree_product_documents!
   spree_related_products!
+  spree_shipstation!
   spree_sitemap!
   spree_static_content!
   spring
