@@ -27,7 +27,7 @@ shared_dir = "/home/spree/copiersflorida/shared"
 working_directory app_dir
 
 # Set unicorn options
-worker_processes 2
+worker_processes 4
 preload_app true
 timeout 30
 

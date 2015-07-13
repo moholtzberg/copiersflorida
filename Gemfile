@@ -97,6 +97,7 @@ gem 'spree_msrp',                   github: 'moholtzberg/spree_msrp',           
 gem 'spree_product_documents',      github: 'moholtzberg/spree_product_documents',          branch: master
 gem 'spree_error_pages',            github: 'moholtzberg/spree_error_pages',                branch: master
 gem 'spree_messages',               github: 'moholtzberg/spree_messages',                   branch: master
+# gem 'spree_po_number',              path: '../spree_po_number'
 # gem 'spree_messages',               path: '../spree_messages'
 # gem 'spree_copiersflorida_theme',    path: '../spree_copiersflorida_theme'
 # gem 'spree_filter_by_taxon',         path: '../spree_filter_by_taxon'
