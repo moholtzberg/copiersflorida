@@ -59,7 +59,7 @@ gem 'spree_active_shipping',        github: 'spree-contrib/spree_active_shipping
 # gem 'spree_editor',                 github: 'spree-contrib/spree_editor',                   branch: spree_version
 gem 'spree_comments',               github: 'spree-contrib/spree_comments',                 branch: spree_version
 gem 'spree_related_products',       github: 'spree-contrib/spree_related_products',         branch: spree_version
-gem 'spree_paypal_express',         github: 'spree-contrib/better_spree_paypal_express',    branch: spree_version
+gem 'spree_paypal_express',         github: 'simontseng/better_spree_paypal_express',    branch: spree_version
 gem 'spree_static_content',         github: 'spree-contrib/spree_static_content',           branch: spree_version
 gem 'spree_digital',                github: 'spree-contrib/spree_digital',                  branch: spree_version
 
