@@ -66,5 +66,6 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+Spree::Api::Config[:requires_authentication] = false
 Spree::Image.attachment_definitions[:attachment][:url] = '/images/:id/:style/:basename.:extension'
 Spree::Image.attachment_definitions[:attachment][:path] = '/images/:id/:style/:basename.:extension'
