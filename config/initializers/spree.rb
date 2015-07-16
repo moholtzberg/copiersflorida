@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ':app/public/spree/:class/:id/:style/:basename.:extension',
-    default_url:   ':app/public/spree/:class/:id/:style/:basename.:extension',
+    path:          ':app/public/:class/:id/:style/:basename.:extension',
+    default_url:   ':app/public/:class/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -67,8 +67,8 @@ end
 
 Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
-Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:url] = '/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path] = '/:class/:id/:style/:basename.:extension'
 
 Spree::Product.where(:id => [1..10]).each do |prod| 
   prod.images.each do |image| 
@@ -100,7 +100,7 @@ Spree::Product.where(:id => [1..10]).each do |prod|
         puts "---------------------#{url}"
        begin 
          read_file = open(url).read
-         file_name.write(read_file)
+         file_name.write(read_file).close
          puts "\n\r ****************#{prod.id} images copied"
        rescue
           
