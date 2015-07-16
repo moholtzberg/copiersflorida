@@ -6,6 +6,7 @@
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
 Spree.config do |config|
+  require 'spree/app_configuration_decorator'
   attachment_config = {
 
     # storage: :file_system,
@@ -48,21 +49,21 @@ Spree.config do |config|
   # config.mails_from = "no-reply@copiersflorida.com"
   
   if Rails.env.production?
-      config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
-      config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
-    else
-      # config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
-      # config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
-    end
+    config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
+    config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
+  else
+    # config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
+    # config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
+  end
 
-    config.shipstation_weight_units = "Ounces" # Grams, Ounces or Pounds
+  config.shipstation_weight_units = "Ounces" # Grams, Ounces or Pounds
 
-    # choose which number to send shipstation, use :shipment or :order, default is :shipment
-    config.shipstation_number = :shipment
+  # choose which number to send shipstation, use :shipment or :order, default is :shipment
+  config.shipstation_number = :shipment
 
-    # if you prefer to send notifications via shipstation
-    config.send_shipped_email = false
-    config.allowed_document_content_types = %w(application/pdf application/zip)
+  # if you prefer to send notifications via shipstation
+  config.send_shipped_email = false
+  config.allowed_document_content_types = %w(application/pdf application/zip)
   
 end
 
