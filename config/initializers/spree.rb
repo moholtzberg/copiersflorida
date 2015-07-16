@@ -77,8 +77,8 @@ Spree::Taxon.attachment_definitions[:url]                     = '/spree/taxons/:
 Spree::Taxon.attachment_definitions[:path]                    = '/spree/taxons/:id/:style/:basename.:extension'
 
 Spree::Config[:allowed_document_content_types] =  %w(application/pdf application/zip)
-Spree::Document.attachment_url    = '/spree/documents/:id/:style/:basename.:extension'
-Spree::Document.attachment_path    = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
 
 Spree::Image.where(:id => [1..100]).each do |img| 
   # prod.images.each do |image| 
