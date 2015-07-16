@@ -8,12 +8,12 @@
 Spree.config do |config|
   attachment_config = {
 
-    storage: :s3,
-    s3_headers: { 
-      "Cache-Control" => "max-age=31557600" 
-    },
-    s3_protocol:    "https",
-    bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
+    # storage: :file_system,
+    # s3_headers: { 
+    #   "Cache-Control" => "max-age=31557600" 
+    # },
+    # s3_protocol:    "https",
+    # bucket:         SECRET["AWS"]["S3"]["BUCKET_NAME"],
 
     styles: {
       mini:     "48x48>",
@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ':app/public/spree/products/:id/:style/:basename.:extension',
-    default_url:   ':app/public/spree/products/:id/:style/:basename.:extension',
+    path:          ':app/public/spree/:class/:id/:style/:basename.:extension',
+    default_url:   ':app/public/spree/:class/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -51,8 +51,8 @@ Spree.config do |config|
       config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
       config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
     else
-      config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
-      config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
+      # config.shipstation_username = "#{SECRET["SHIPSTATION"]["USER"]}"
+      # config.shipstation_password = "#{SECRET["SHIPSTATION"]["PASS"]}"
     end
 
     config.shipstation_weight_units = "Ounces" # Grams, Ounces or Pounds
@@ -67,5 +67,23 @@ end
 
 Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
-Spree::Image.attachment_definitions[:attachment][:url] = '/images/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = '/images/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:url] = '/spree/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path] = '/spree/:class/:id/:style/:basename.:extension'
+
+Spree::Product.where(:id => [1..10]).each do |prod| 
+  prod.images.each do |image| 
+    unless image.nil?
+      ["mini", "small", "product", "large", "original"].each do |style|
+        base_dir = "public/spree/products"
+        dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
+        style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
+        file_name = open("#{style_dir}/#{image.attachment_file_name}", "wb")
+        read_file = open("https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{image.attachment_file_name}").read
+        file_name.write(read_file)
+        puts "\n\r #{prod.id} images copied"
+      end
+    else
+      puts "\n\r #{prod.id} has not images \n\r"
+    end 
+  end 
+end
