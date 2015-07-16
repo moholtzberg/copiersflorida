@@ -74,6 +74,7 @@ Spree::Image.attachment_definitions[:attachment][:path]       = '/spree/products
 Spree::Taxon.attachment_definitions[:url]                     = '/spree/taxons/:id/:style/:basename.:extension'
 Spree::Taxon.attachment_definitions[:path]                    = '/spree/taxons/:id/:style/:basename.:extension'
 
+Spree::Config[:allowed_document_content_types] =  %w(application/pdf application/zip)
 Spree::Document.attachment_url    = '/spree/documents/:id/:style/:basename.:extension'
 Spree::Document.attachment_path    = '/spree/documents/:id/:style/:basename.:extension'
 
