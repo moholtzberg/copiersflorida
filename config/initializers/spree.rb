@@ -62,6 +62,7 @@ Spree.config do |config|
 
     # if you prefer to send notifications via shipstation
     config.send_shipped_email = false
+    config.allowed_document_content_types = %w(application/pdf application/zip)
   
 end
 
