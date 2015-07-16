@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
   config.action_mailer.asset_host = 'https://www.copiersflorida.com'
   # config.asset_host = "copiersflorida.herokuapp.com"
-  # config.asset_host = "copiersflorida.com"
+  config.asset_host = "https://www.copiersflorida.com"
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -23,7 +23,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_files = false
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
