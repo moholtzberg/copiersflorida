@@ -21,8 +21,8 @@ Spree.config do |config|
       product:  "240x240>",
       large:    "600x600>"
     },
-    path:          ':app/public/:class/:id/:style/:basename.:extension',
-    default_url:   ':app/public/:class/:id/:style/:basename.:extension',
+    # path:          ':app/public/:class/:id/:style/:basename.:extension',
+    # default_url:   ':app/public/:class/:id/:style/:basename.:extension',
     default_style: "product"
   }
   
@@ -67,12 +67,17 @@ end
 
 Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
-Spree::Image.attachment_definitions[:attachment][:url] = '/:class/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path] = '/:class/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:url]        = '/spree/products/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path]       = '/spree/products/:id/:style/:basename.:extension'
+Spree::Taxon.attachment_definitions[:attachment][:url]        = '/spree/taxons/:id/:style/:basename.:extension'
+Spree::Taxon.attachment_definitions[:attachment][:path]       = '/spree/taxons/:id/:style/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
 
-Spree::Product.where(:id => [1..10]).each do |prod| 
-  prod.images.each do |image| 
-    unless image.nil?
+Spree::Image.where(:id => [1..100]).each do |img| 
+  # prod.images.each do |image| 
+    prod = Spree::Product.find(img.viewable_id)
+    unless img.nil?
       ["mini", "small", "product", "large", "original"].each do |style|
         base_dir = "public/spree/products"
         puts "Base Dir-----------#{base_dir}"
@@ -94,9 +99,9 @@ Spree::Product.where(:id => [1..10]).each do |prod|
           style_dir = "#{dir}/#{style}"
         end
         #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
-        file_name = open("#{style_dir}/#{image.attachment_file_name}", "wb")
+        file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
         puts "---------------------#{file_name}"
-        url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{image.attachment_file_name}"
+        url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{img.attachment_file_name}"
         puts "---------------------#{url}"
        begin 
          read_file = open(url).read
@@ -112,5 +117,5 @@ Spree::Product.where(:id => [1..10]).each do |prod|
     else
       puts "\n\r #{prod.id} has not images \n\r"
     end 
-  end 
+  # end 
 end
