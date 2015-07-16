@@ -67,10 +67,13 @@ end
 
 Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
+
 Spree::Image.attachment_definitions[:attachment][:url]        = '/spree/products/:id/:style/:basename.:extension'
 Spree::Image.attachment_definitions[:attachment][:path]       = '/spree/products/:id/:style/:basename.:extension'
+
 Spree::Taxon.attachment_definitions[:attachment][:url]        = '/spree/taxons/:id/:style/:basename.:extension'
 Spree::Taxon.attachment_definitions[:attachment][:path]       = '/spree/taxons/:id/:style/:basename.:extension'
+
 Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
 Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
 
