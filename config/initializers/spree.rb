@@ -103,6 +103,7 @@ Spree::Product.where(:id => [1..10]).each do |prod|
           puts "\n\r ****************#{prod.id} images copied"
         else
           puts "+++++++++++++++++++++ failed to open #{url}"
+        end
       end
     else
       puts "\n\r #{prod.id} has not images \n\r"
