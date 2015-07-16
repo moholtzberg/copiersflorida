@@ -74,8 +74,8 @@ Spree::Image.attachment_definitions[:attachment][:path]       = '/spree/products
 Spree::Taxon.attachment_definitions[:url]                     = '/spree/taxons/:id/:style/:basename.:extension'
 Spree::Taxon.attachment_definitions[:path]                    = '/spree/taxons/:id/:style/:basename.:extension'
 
-Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
-Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_url    = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_path    = '/spree/documents/:id/:style/:basename.:extension'
 
 Spree::Image.where(:id => [1..100]).each do |img| 
   # prod.images.each do |image| 
