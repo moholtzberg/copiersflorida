@@ -98,9 +98,13 @@ Spree::Product.where(:id => [1..10]).each do |prod|
         puts "---------------------#{file_name}"
         url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{image.attachment_file_name}"
         puts "---------------------#{url}"
-        if read_file = open(url).read
-          file_name.write(read_file)
-          puts "\n\r ****************#{prod.id} images copied"
+       begin 
+         read_file = open(url).read
+         file_name.write(read_file)
+         puts "\n\r ****************#{prod.id} images copied"
+       rescue
+          
+          puts " ++++++++++++++++++++ Houston we have problem #{prod.id}"
         else
           puts "+++++++++++++++++++++ failed to open #{url}"
         end
