@@ -75,12 +75,29 @@ Spree::Product.where(:id => [1..10]).each do |prod|
     unless image.nil?
       ["mini", "small", "product", "large", "original"].each do |style|
         base_dir = "public/spree/products"
-        dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
-        style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
+        puts "Base Dir-----------#{base_dir}"
+        if File.exists?("#{base_dir}/#{prod.id}")
+          dir = "#{base_dir}/#{prod.id}"
+          puts "------------------#{base_dir}/#{prod.id} Exists"
+        else
+          Dir.mkdir("#{base_dir}/#{prod.id}")
+          puts "------------------#{base_dir}/#{prod.id} Created"
+          dir = "#{base_dir}/#{prod.id}"
+        end
+        # dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
+        if File.exists?("#{dir}/#{style}")
+          style_dir = "#{dir}/#{style}"
+          puts "------------------#{dir}/#{style} Exists"
+        else
+          Dir.mkdir("#{dir}/#{style}")
+          puts "------------------#{dir}/#{style} Created"
+          style_dir = "#{dir}/#{style}"
+        end
+        #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
         file_name = open("#{style_dir}/#{image.attachment_file_name}", "wb")
         read_file = open("https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{image.attachment_file_name}").read
         file_name.write(read_file)
-        puts "\n\r #{prod.id} images copied"
+        puts "\n\r ****************#{prod.id} images copied"
       end
     else
       puts "\n\r #{prod.id} has not images \n\r"
