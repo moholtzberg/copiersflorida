@@ -83,14 +83,17 @@ Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/document
 Spree::Image.where(:id => [1..100]).each do |img| 
   # prod.images.each do |image| 
     # prod = Spree::Product.find(img.viewable_id).nil? ? nil : Spree::Product.find(img.viewable_id)
-    
-    if !Spree::Variant.find(img.viewable_id).nil?
-      prod = Spree::Variant.find(img.viewable_id)
-    else
-      prod = nil
+    # puts "[[[[[[[[[[[[[[[[[[[[[[[[[[--------------  #{img.product.inspect} --------]]]]]]]]]]]]]]]]]]]]]]]]]]"
+    # if Spree::Product.find_by_id(img.viewable_id)
+    #   prod = Spree::Product.find_by_id(img.viewable_id)
+    # else
+    #   prod = nil
+    # end
+    if img.nil?
+      "puts +++++++++++++++++++++++++++++++ images are nil\n\r"
     end
-    
-    unless img.nil?
+    prod = Spree::Product.find_by_id(img.viewable_id)
+    unless prod.nil?
       ["mini", "small", "product", "large", "original"].each do |style|
         base_dir = "public/spree/products"
         puts "Base Dir-----------#{base_dir}"
@@ -128,7 +131,7 @@ Spree::Image.where(:id => [1..100]).each do |img|
         end
       end
     else
-      puts "\n\r #{prod.id} has not images \n\r"
+      puts "\n\r #{img.id} has no product/images \n\r"
     end 
   # end 
 end
