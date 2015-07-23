@@ -101,9 +101,9 @@ Spree::Image.where(:id => [1..100]).each do |img|
           dir = "#{base_dir}/#{img.id}"
           puts "------------------#{base_dir}/#{img.id} Exists"
         else
-          Dir.mkdir("#{base_dir}/#{prod.id}")
+          Dir.mkdir("#{base_dir}/#{img.id}")
           puts "------------------#{base_dir}/#{img.id} Created"
-          dir = "#{base_dir}/#{prod.id}"
+          dir = "#{base_dir}/#{img.id}"
         end
         # dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
         if File.exists?("#{dir}/#{style}")
