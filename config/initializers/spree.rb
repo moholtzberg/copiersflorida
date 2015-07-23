@@ -77,8 +77,8 @@ Spree::Taxon.attachment_definitions[:url]                     = '/spree/taxons/:
 Spree::Taxon.attachment_definitions[:path]                    = '/spree/taxons/:id/:style/:basename.:extension'
 
 Spree::Config[:allowed_document_content_types] =  %w(application/pdf application/zip)
-Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
-Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:basename.:extension'
 
 # Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx| 
 #   puts "doing stuff #{idx}"
@@ -137,36 +137,36 @@ Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/document
 #   # end 
 # end
 
-Spree::Document.where(:id => [0..1000]).each_with_index do |img, idx| 
-  unless img.nil?
-      base_dir = "public/spree/documents"
-      if !File.exists?(base_dir)
-        Dir.mkdir(base_dir)
-      end
-      puts "Base Dir-----------#{base_dir}"
-      if File.exists?("#{base_dir}/#{img.id}")
-        dir = "#{base_dir}/#{img.id}"
-        puts "------------------#{base_dir}/#{img.id} Exists"
-      else
-        Dir.mkdir("#{base_dir}/#{img.id}")
-        puts "------------------#{base_dir}/#{img.id} Created"
-        dir = "#{base_dir}/#{img.id}"
-      end
-      file_name = open("#{dir}/#{img.attachment_file_name}", "wb")
-      puts "---------------------#{file_name}"
-      url = "https://s3.amazonaws.com/copiersflorida/app/public/spree/products/#{img.id}/#{img.attachment_file_name}"
-      # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
-      puts "---------------------#{url}"
-     begin 
-       read_file = open(url).read
-       file_name.write(read_file)
-       puts "\n\r ****************#{img.id} images copied"
-     rescue => e
-        puts " ++++++++++++++++++++ Houston we have problem #{img.id} ---  #{e.inspect}"
-      else
-        puts "+++++++++++++++++++++ failed to open #{url}"
-      end
-  else
-    puts "\n\r #{img.id} has no product/documents \n\r"
-  end 
-end
+# Spree::Document.where(:id => [0..1000]).each_with_index do |img, idx| 
+#   unless img.nil?
+#       base_dir = "public/spree/documents"
+#       if !File.exists?(base_dir)
+#         Dir.mkdir(base_dir)
+#       end
+#       puts "Base Dir-----------#{base_dir}"
+#       if File.exists?("#{base_dir}/#{img.id}")
+#         dir = "#{base_dir}/#{img.id}"
+#         puts "------------------#{base_dir}/#{img.id} Exists"
+#       else
+#         Dir.mkdir("#{base_dir}/#{img.id}")
+#         puts "------------------#{base_dir}/#{img.id} Created"
+#         dir = "#{base_dir}/#{img.id}"
+#       end
+#       file_name = open("#{dir}/#{img.attachment_file_name}", "wb")
+#       puts "---------------------#{file_name}"
+#       url = "https://s3.amazonaws.com/copiersflorida/app/public/spree/products/#{img.id}/#{img.attachment_file_name}"
+#       # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
+#       puts "---------------------#{url}"
+#      begin 
+#        read_file = open(url).read
+#        file_name.write(read_file)
+#        puts "\n\r ****************#{img.id} images copied"
+#      rescue => e
+#         puts " ++++++++++++++++++++ Houston we have problem #{img.id} ---  #{e.inspect}"
+#       else
+#         puts "+++++++++++++++++++++ failed to open #{url}"
+#       end
+#   else
+#     puts "\n\r #{img.id} has no product/documents \n\r"
+#   end 
+# end
