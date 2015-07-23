@@ -89,20 +89,20 @@ Spree::Image.where(:id => [1..100]).each do |img|
     # else
     #   prod = nil
     # end
-    if img.nil?
-      "puts +++++++++++++++++++++++++++++++ images are nil\n\r"
-    end
-    prod = Spree::Product.find_by_id(img.viewable_id)
-    unless prod.nil?
+    # if img.nil?
+    #   "puts +++++++++++++++++++++++++++++++ images are nil\n\r"
+    # end
+    # prod = Spree::Product.find_by_id(img.viewable_id)
+    unless img.nil?
       ["mini", "small", "product", "large", "original"].each do |style|
         base_dir = "public/spree/products"
         puts "Base Dir-----------#{base_dir}"
-        if File.exists?("#{base_dir}/#{prod.id}")
-          dir = "#{base_dir}/#{prod.id}"
-          puts "------------------#{base_dir}/#{prod.id} Exists"
+        if File.exists?("#{base_dir}/#{img.id}")
+          dir = "#{base_dir}/#{img.id}"
+          puts "------------------#{base_dir}/#{img.id} Exists"
         else
           Dir.mkdir("#{base_dir}/#{prod.id}")
-          puts "------------------#{base_dir}/#{prod.id} Created"
+          puts "------------------#{base_dir}/#{img.id} Created"
           dir = "#{base_dir}/#{prod.id}"
         end
         # dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
@@ -117,13 +117,13 @@ Spree::Image.where(:id => [1..100]).each do |img|
         #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
         file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
         puts "---------------------#{file_name}"
-        url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{img.attachment_file_name}"
+        url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{img.id}/#{style}/#{img.attachment_file_name}"
         # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
         puts "---------------------#{url}"
        begin 
          read_file = open(url).read
          file_name.write(read_file)
-         puts "\n\r ****************#{prod.id} images copied"
+         puts "\n\r ****************#{img.id} images copied"
        rescue => e
           puts " ++++++++++++++++++++ Houston we have problem #{prod.id} ---  #{e.inspect}"
         else
