@@ -82,7 +82,14 @@ Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/document
 
 Spree::Image.where(:id => [1..100]).each do |img| 
   # prod.images.each do |image| 
-    prod = Spree::Product.find(img.viewable_id)
+    # prod = Spree::Product.find(img.viewable_id).nil? ? nil : Spree::Product.find(img.viewable_id)
+    
+    if !Spree::Variant.find(img.viewable_id).nil?
+      prod = Spree::Variant.find(img.viewable_id)
+    else
+      prod = nil
+    end
+    
     unless img.nil?
       ["mini", "small", "product", "large", "original"].each do |style|
         base_dir = "public/spree/products"
@@ -108,14 +115,14 @@ Spree::Image.where(:id => [1..100]).each do |img|
         file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
         puts "---------------------#{file_name}"
         url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{prod.id}/#{style}/#{img.attachment_file_name}"
+        # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
         puts "---------------------#{url}"
        begin 
          read_file = open(url).read
-         file_name.write(read_file).close
+         file_name.write(read_file)
          puts "\n\r ****************#{prod.id} images copied"
-       rescue
-          
-          puts " ++++++++++++++++++++ Houston we have problem #{prod.id}"
+       rescue => e
+          puts " ++++++++++++++++++++ Houston we have problem #{prod.id} ---  #{e.inspect}"
         else
           puts "+++++++++++++++++++++ failed to open #{url}"
         end
