@@ -80,7 +80,8 @@ Spree::Config[:allowed_document_content_types] =  %w(application/pdf application
 Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:style/:basename.:extension'
 Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:style/:basename.:extension'
 
-Spree::Image.where(:id => [1..100]).each do |img| 
+Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx| 
+  puts "doing stuff #{idx}"
   # prod.images.each do |image| 
     # prod = Spree::Product.find(img.viewable_id).nil? ? nil : Spree::Product.find(img.viewable_id)
     # puts "[[[[[[[[[[[[[[[[[[[[[[[[[[--------------  #{img.product.inspect} --------]]]]]]]]]]]]]]]]]]]]]]]]]]"
