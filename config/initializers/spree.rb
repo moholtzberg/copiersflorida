@@ -71,14 +71,14 @@ Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
 
 Spree::Image.attachment_definitions[:attachment][:url]        = '/spree/products/:id/:style/:basename.:extension'
-Spree::Image.attachment_definitions[:attachment][:path]       = '/spree/products/:id/:style/:basename.:extension'
+Spree::Image.attachment_definitions[:attachment][:path]       = 'public/spree/products/:id/:style/:basename.:extension'
 
 Spree::Taxon.attachment_definitions[:url]                     = '/spree/taxons/:id/:style/:basename.:extension'
-Spree::Taxon.attachment_definitions[:path]                    = '/spree/taxons/:id/:style/:basename.:extension'
+Spree::Taxon.attachment_definitions[:path]                    = 'public/spree/taxons/:id/:style/:basename.:extension'
 
 Spree::Config[:allowed_document_content_types] =  %w(application/pdf application/zip)
 Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:basename.:extension'
-Spree::Document.attachment_definitions[:attachment][:path]    = '/spree/documents/:id/:basename.:extension'
+Spree::Document.attachment_definitions[:attachment][:path]    = 'public/spree/documents/:id/:basename.:extension'
 
 # Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx| 
 #   puts "doing stuff #{idx}"
