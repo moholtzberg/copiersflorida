@@ -18,6 +18,7 @@ gem 'aws-sdk', '< 2.0'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'unicorn'
+gem 'browser'
 # gem 'font-awesome-sass'
 
 group :production do

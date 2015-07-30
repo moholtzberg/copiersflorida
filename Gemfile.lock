@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 7f312fcf9ac540f371612d4309a3d78cffe51543
+  revision: 623be6a8d5bf115587fb102d29d460694dc0241e
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
@@ -287,6 +287,7 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    browser (0.8.0)
     builder (3.2.2)
     business_time (0.7.4)
       activesupport (>= 3.1.0)
@@ -574,6 +575,7 @@ DEPENDENCIES
   aws-sdk (< 2.0)
   better_errors
   binding_of_caller
+  browser
   business_time
   byebug
   capistrano-bundler
