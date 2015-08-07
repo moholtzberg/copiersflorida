@@ -43,9 +43,10 @@ end
 gem 'newrelic_rpm'
 
 gem 'whenever', :require => false
-gem 'sendgrid-ruby'
+# gem 'sendgrid-ruby'
 gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 gem 'business_time'
+gem 'premailer-rails'
 
 spree_version = '3-0-stable'
 master = 'master'
