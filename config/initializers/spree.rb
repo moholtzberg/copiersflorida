@@ -69,6 +69,7 @@ end
 
 Spree.user_class = "Spree::User"
 Spree::Api::Config[:requires_authentication] = false
+Spree::Auth::Config[:registration_step] = false;
 
 Spree::Image.attachment_definitions[:attachment][:url]        = '/spree/products/:id/:style/:basename.:extension'
 Spree::Image.attachment_definitions[:attachment][:path]       = 'public/spree/products/:id/:style/:basename.:extension'
@@ -80,62 +81,63 @@ Spree::Config[:allowed_document_content_types] =  %w(application/pdf application
 Spree::Document.attachment_definitions[:attachment][:url]     = '/spree/documents/:id/:basename.:extension'
 Spree::Document.attachment_definitions[:attachment][:path]    = 'public/spree/documents/:id/:basename.:extension'
 
-# Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx| 
-#   puts "doing stuff #{idx}"
-#   # prod.images.each do |image| 
-#     # prod = Spree::Product.find(img.viewable_id).nil? ? nil : Spree::Product.find(img.viewable_id)
-#     # puts "[[[[[[[[[[[[[[[[[[[[[[[[[[--------------  #{img.product.inspect} --------]]]]]]]]]]]]]]]]]]]]]]]]]]"
-#     # if Spree::Product.find_by_id(img.viewable_id)
-#     #   prod = Spree::Product.find_by_id(img.viewable_id)
-#     # else
-#     #   prod = nil
-#     # end
-#     # if img.nil?
-#     #   "puts +++++++++++++++++++++++++++++++ images are nil\n\r"
-#     # end
-#     # prod = Spree::Product.find_by_id(img.viewable_id)
-#     unless img.nil?
-#       ["mini", "small", "product", "large", "original"].each do |style|
-#         base_dir = "public/spree/products"
-#         puts "Base Dir-----------#{base_dir}"
-#         if File.exists?("#{base_dir}/#{img.id}")
-#           dir = "#{base_dir}/#{img.id}"
-#           puts "------------------#{base_dir}/#{img.id} Exists"
-#         else
-#           Dir.mkdir("#{base_dir}/#{img.id}")
-#           puts "------------------#{base_dir}/#{img.id} Created"
-#           dir = "#{base_dir}/#{img.id}"
-#         end
-#         # dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
-#         if File.exists?("#{dir}/#{style}")
-#           style_dir = "#{dir}/#{style}"
-#           puts "------------------#{dir}/#{style} Exists"
-#         else
-#           Dir.mkdir("#{dir}/#{style}")
-#           puts "------------------#{dir}/#{style} Created"
-#           style_dir = "#{dir}/#{style}"
-#         end
-#         #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
-#         file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
-#         puts "---------------------#{file_name}"
-#         url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{img.id}/#{style}/#{img.attachment_file_name}"
-#         # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
-#         puts "---------------------#{url}"
-#        begin 
-#          read_file = open(url).read
-#          file_name.write(read_file)
-#          puts "\n\r ****************#{img.id} images copied"
-#        rescue => e
-#           puts " ++++++++++++++++++++ Houston we have problem #{prod.id} ---  #{e.inspect}"
-#         else
-#           puts "+++++++++++++++++++++ failed to open #{url}"
-#         end
-#       end
-#     else
-#       puts "\n\r #{img.id} has no product/images \n\r"
-#     end 
-#   # end 
-# end
+Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx| 
+  puts "doing stuff #{idx}"
+  # prod.images.each do |image| 
+    # prod = Spree::Product.find(img.viewable_id).nil? ? nil : Spree::Product.find(img.viewable_id)
+    # puts "[[[[[[[[[[[[[[[[[[[[[[[[[[--------------  #{img.product.inspect} --------]]]]]]]]]]]]]]]]]]]]]]]]]]"
+    # if Spree::Product.find_by_id(img.viewable_id)
+    #   prod = Spree::Product.find_by_id(img.viewable_id)
+    # else
+    #   prod = nil
+    # end
+    # if img.nil?
+    #   "puts +++++++++++++++++++++++++++++++ images are nil\n\r"
+    # end
+    # prod = Spree::Product.find_by_id(img.viewable_id)
+    unless img.nil?
+      ["mini", "small", "product", "large", "original"].each do |style|
+        base_dir = "public/spree/products"
+        puts "Base Dir-----------#{base_dir}"
+        if File.exists?("#{base_dir}/#{img.id}")
+          dir = "#{base_dir}/#{img.id}"
+          puts "------------------#{base_dir}/#{img.id} Exists"
+        else
+          Dir.mkdir("#{base_dir}/#{img.id}")
+          puts "------------------#{base_dir}/#{img.id} Created"
+          dir = "#{base_dir}/#{img.id}"
+        end
+        # dir = File.exists?("#{base_dir}/#{prod.id}") ? "#{base_dir}/#{prod.id}" : Dir.mkdir("#{base_dir}/#{prod.id}")
+        if File.exists?("#{dir}/#{style}")
+          style_dir = "#{dir}/#{style}"
+          puts "------------------#{dir}/#{style} Exists"
+        else
+          Dir.mkdir("#{dir}/#{style}")
+          puts "------------------#{dir}/#{style} Created"
+          style_dir = "#{dir}/#{style}"
+        end
+        #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
+        file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
+        puts "---------------------#{file_name}"
+        url = "https://copiersflorida.com/spree/products/#{img.id}/#{style}/#{img.attachment_file_name}"
+        # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{img.id}/#{style}/#{img.attachment_file_name}"
+        # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
+        puts "---------------------#{url}"
+       begin 
+         read_file = open(url).read
+         file_name.write(read_file)
+         puts "\n\r ****************#{img.id} images copied"
+       rescue => e
+          puts " ++++++++++++++++++++ Houston we have problem #{img.id} ---  #{e.inspect}"
+        else
+          puts "+++++++++++++++++++++ failed to open #{url}"
+        end
+      end
+    else
+      puts "\n\r #{img.id} has no product/images \n\r"
+    end 
+  # end 
+end
 
 # Spree::Document.where(:id => [0..1000]).each_with_index do |img, idx| 
 #   unless img.nil?
