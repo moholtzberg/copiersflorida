@@ -119,7 +119,7 @@ Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx|
         #style_dir = File.exists?("#{dir}/#{style}") ? "#{dir}/#{style}" : Dir.mkdir("#{dir}/#{style}")
         file_name = open("#{style_dir}/#{img.attachment_file_name}", "wb")
         puts "---------------------#{file_name}"
-        url = "https://copiersflorida.com/spree/products/#{img.id}/#{style}/#{img.attachment_file_name}"
+        url = "https://www.copiersflorida.com/spree/products/#{img.id}/#{style}/#{img.attachment_file_name}"
         # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/#{img.id}/#{style}/#{img.attachment_file_name}"
         # url = "https://s3.amazonaws.com/copiersflorida/spree/spree/images/10/#{style}/kyocera_m3540idn.jpg"
         puts "---------------------#{url}"
