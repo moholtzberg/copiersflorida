@@ -125,7 +125,7 @@ Spree::Image.where(:id => [0..1000]).each_with_index do |img, idx|
         puts "---------------------#{url}"
        begin 
          read_file = open(url).read
-         file_name.write(read_file)
+         file_name.write(read_file).close
          puts "\n\r ****************#{img.id} images copied"
        rescue => e
           puts " ++++++++++++++++++++ Houston we have problem #{img.id} ---  #{e.inspect}"
