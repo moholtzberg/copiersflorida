@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 814d4a0e1a5565fa5bf601d446fa4f4cf4083d5b
+  revision: 0302b4018a6503b0f5ce36384532e8eff7623325
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
@@ -502,7 +502,7 @@ GEM
     sitemap_generator (4.3.1)
       builder
     spring (1.3.6)
-    sprockets (3.3.2)
+    sprockets (3.3.3)
       rack (~> 1.0)
     sprockets-rails (2.3.2)
       actionpack (>= 3.0)
