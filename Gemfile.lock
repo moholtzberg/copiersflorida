@@ -8,11 +8,19 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_copiersflorida_theme.git
-  revision: 3097fc4f73771d99cdcc5cc5ab25088d906907f7
+  revision: cb5ce8c1590cd1cc1d34296b57867a88c43ced48
   branch: master
   specs:
     spree_copiersflorida_theme (3.0.0)
       spree_core (>= 3.0.0)
+
+GIT
+  remote: git://github.com/moholtzberg/spree_credit_lines.git
+  revision: 16385355c70beebb5c391316d45dfbc20cb7d0f4
+  branch: master
+  specs:
+    spree_credit_lines (3.0.0)
+      spree_core (~> 3.0.0)
 
 GIT
   remote: git://github.com/moholtzberg/spree_error_pages.git
@@ -595,6 +603,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_comments!
   spree_copiersflorida_theme!
+  spree_credit_lines!
   spree_digital!
   spree_error_pages!
   spree_gateway!

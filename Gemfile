@@ -92,15 +92,17 @@ gem 'spree_shipstation',            github: 'moholtzberg/spree_shipstation',    
 # gem 'spree_env_ribbon',              github: 'moholtzberg/spree_env_ribbon',                  branch: master
 # gem 'spree_one_page_checkout',       github: 'moholtzberg/spree_one_page_checkout'
 # gem 'spree_ajax_add_to_cart',        github: 'moholtzberg/spree_ajax_add_to_cart',            branch: spree_version
-# gem 'spree_credit_lines',            path: '../spree_credit_lines'
+
 # gem 'spree_terms',                   path: '../spree_terms'
 # gem 'spree_advanced_admin_ui',       path: '../spree_advanced_admin_ui'
 gem 'spree_msrp',                   github: 'moholtzberg/spree_msrp',                       branch: spree_version
 gem 'spree_product_documents',      github: 'moholtzberg/spree_product_documents',          branch: master
 gem 'spree_error_pages',            github: 'moholtzberg/spree_error_pages',                branch: master
 gem 'spree_messages',               github: 'moholtzberg/spree_messages',                   branch: master
+gem 'spree_credit_lines',           github: 'moholtzberg/spree_credit_lines',               branch: master
 # gem 'spree_po_number',              path: '../spree_po_number'
 # gem 'spree_messages',               path: '../spree_messages'
+# gem 'spree_credit_lines',            path: '../spree_credit_lines'
 # gem 'spree_copiersflorida_theme',    path: '../spree_copiersflorida_theme'
 # gem 'spree_filter_by_taxon',         path: '../spree_filter_by_taxon'
 gem 'spree_copiersflorida_theme',   github: 'moholtzberg/spree_copiersflorida_theme',       branch: master
