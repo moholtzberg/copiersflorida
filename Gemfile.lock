@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_credit_lines.git
-  revision: 16385355c70beebb5c391316d45dfbc20cb7d0f4
+  revision: c8dabdb48cb1bc07fa6dc853f111fd746523ca53
   branch: master
   specs:
     spree_credit_lines (3.0.0)
