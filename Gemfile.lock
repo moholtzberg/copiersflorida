@@ -32,7 +32,7 @@ GIT
 
 GIT
   remote: git://github.com/moholtzberg/spree_messages.git
-  revision: bf2bffb0d80afb4f28de5252227b059f3cfa389a
+  revision: bf0bf4a8c845dd47c707b3b8cb782c947f76c10b
   branch: master
   specs:
     spree_messages (3.0.0)
